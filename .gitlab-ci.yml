@@ -1,0 +1,18 @@
+stages:
+  - stage_1
+  - stage_2
+
+job_1:
+  stage: stage_1
+  script:
+    - ./echo.sh
+  tags:
+    - demotag
+
+job_2:
+  stage: stage_2
+  script:
+    - ./echo.sh
+    - ./error.sh
+  tags:
+    - demotag
